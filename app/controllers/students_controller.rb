@@ -9,4 +9,9 @@ render json: students
      students = Student.all.order("grade DESC")
      render json: students
     end
+
+    def grades
+    student = Student.all.order("grade DESC").first
+    render json: student
+    end
 end
